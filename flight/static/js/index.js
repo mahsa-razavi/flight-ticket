@@ -1,16 +1,3 @@
-//function esc(element) {
-//    document.addEventListener('keydown', event => {
-//        if(event.key === 'Escape') {
-//            element.style.display = 'none';
-//        }
-//    });
-//    element.parentElement.querySelector('input[type=text]').addEventListener("blur", () => {
-//        setTimeout(() => {
-//            element.style.display = 'none';
-//        },80);
-//    });
-//}
-
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#flight-from").addEventListener("input", event => {
         flight_from(event);
@@ -129,16 +116,6 @@ function flight_search() {
     if(document.querySelector("#one-way").checked) {
         if(!document.querySelector("#depart_date").value) {
             alert("Please select departure date.");
-            return false;
-        }
-    }
-    if(document.querySelector("#round-trip").checked) {
-        if(!document.querySelector("#depart_date").value) {
-            alert("Please select departure date.");
-            return false;
-        }
-        if(!document.querySelector("#return_date").value) {
-            alert("Please select return date.");
             return false;
         }
     }

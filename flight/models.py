@@ -46,7 +46,7 @@ class Flight(models.Model):
 
 
 GENDER = (
-    ('male','MALE'),    #(actual_value, human_readable_value)
+    ('male','MALE'),  
     ('female','FEMALE')
 )
 
@@ -54,8 +54,7 @@ class Passenger(models.Model):
     first_name = models.CharField(max_length=64, blank=True)
     last_name = models.CharField(max_length=64, blank=True)
     gender = models.CharField(max_length=20, choices=GENDER, blank=True)
-    #passenger = models.ForeignKey(User, on_delete=models.CASCADE, related_name="flights")
-    #flight = models.ForeignKey(Flight, on_delete=models.CASCADE, related_name="passengers")
+
 
     def __str__(self):
         return f"Passenger: {self.first_name} {self.last_name}, {self.gender}"
@@ -83,8 +82,6 @@ class Ticket(models.Model):
     flight_adate = models.DateField(blank=True, null=True)
     flight_fare = models.FloatField(blank=True,null=True)
     other_charges = models.FloatField(blank=True,null=True)
-    coupon_used = models.CharField(max_length=15,blank=True)
-    coupon_discount = models.FloatField(default=0.0)
     total_fare = models.FloatField(blank=True, null=True)
     seat_class = models.CharField(max_length=20, choices=SEAT_CLASS)
     booking_date = models.DateTimeField(default=datetime.now)

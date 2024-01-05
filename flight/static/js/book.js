@@ -70,10 +70,9 @@ function add_traveller() {
 
     let pcount = document.querySelector("#p-count").value;
     let fare = document.querySelector("#basefare").value;
-    let fee = document.querySelector("#fee").value;
     if (parseInt(pcount)!==0) {
         document.querySelector(".base-fare-value span").innerText = parseInt(fare)*parseInt(pcount);
-        document.querySelector(".total-fare-value span").innerText = (parseInt(fare)*parseInt(pcount))+parseInt(fee);
+        document.querySelector(".total-fare-value span").innerText = (parseInt(fare)*parseInt(pcount));
     }
 
 }
@@ -91,10 +90,9 @@ function del_traveller(btn) {
     
     let pcount = document.querySelector("#p-count").value;
     let fare = document.querySelector("#basefare").value;
-    let fee = document.querySelector("#fee").value;
     if (parseInt(pcount) !== 0) {
         document.querySelector(".base-fare-value span").innerText = parseInt(fare)*parseInt(pcount);
-        document.querySelector(".total-fare-value span").innerText = (parseInt(fare)*parseInt(pcount))+parseInt(fee);   
+        document.querySelector(".total-fare-value span").innerText = (parseInt(fare)*parseInt(pcount));   
     }
 }
 
