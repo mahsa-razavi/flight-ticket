@@ -30,10 +30,9 @@ def createticket(user,passengers,passengerscount,flight1,flight_1date,flight_1cl
     else:
         ticket.flight_fare = flight1.economy_fare*int(passengerscount)
         ffre = flight1.economy_fare*int(passengerscount)
-    ticket.other_charges = FEE
     if coupon:
         ticket.coupon_used = coupon                     ##########Coupon
-    ticket.total_fare = ffre+FEE+0.0                    ##########Total(Including coupon)
+    ticket.total_fare = ffre+0.0                    ##########Total(Including coupon)
     ticket.seat_class = flight_1class.lower()
     ticket.status = 'PENDING'
     ticket.mobile = ('+'+countrycode+' '+mobile)
