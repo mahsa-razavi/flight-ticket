@@ -1,0 +1,49 @@
+{% extends 'flight/layout.html' %}
+
+{% load static %}
+
+{% block head %}
+    <title>Terms and Conditions | Flight</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/privacy-policy.css' %}">
+{% endblock head %}
+
+{% block body %}
+    <section class="privacybanner-section">
+            <img src="{% static 'img/terms-and-conditions.png' %}" alt="Privacy Policy" class="privacybannerimg">
+    </section>
+    <section class="section section1">
+        <div class="container">
+            <p>
+                The travel site <b>site</b> is maintained by Flight Inc., an IATA certified travel company operating in compliance with the laws of the Republic of India. By accessing or using this site or its services, you agree to the following terms and conditions, including any supplementary guidelines and future modifications.
+            </p>
+            <p>
+                Flight reserves the right to modify, alter, or remove any part of these Terms and Conditions without prior notice. Any changes made to this Terms and Conditions of Use will be effective immediately upon posting on the site. It is your responsibility to regularly check the "Terms & Conditions" link to stay informed.
+            </p>
+            <p>
+                <b>1. Agreement between the Clients & Flight:</b><br>
+                By accessing, using, browsing, or making bookings through flight-web-app.herokuapp.com, users accept and agree to the terms and conditions of our portal. Any violation may result in legal action by Flight Planners Ltd. and its subsidiaries (including site).
+            </p>
+            <p>
+                <b>2. Prices on the Website:</b><br>
+                The prices offered on <b>site</b> generally include accommodation charges, taxes (unless specified otherwise), and, in some cases, certain meals (Breakfast/Lunch/Dinner). They do not cover personal expenses or additional charges such as telephone calls, personal services, entrance fees, and bar charges.
+            </p>
+            <p>
+                <b>3. Mode of Payments & the Policies:</b><br>
+                Our payment gateway ensures secure transactions, protecting customers' personal security codes from disclosure.
+            </p>
+            <p>
+                <b>4. Use of the Website</b><br>
+                <b>By using this website, you agree that:</b>
+                <ul>
+                    <li>You have the legal authority to enter into these Terms of Use.</li>
+                    <li>You will use the website in accordance with its Terms of Use.</li>
+                    <li>You will only make lawful bookings for yourself or others with proper authorization.</li>
+                    <li>You will provide accurate and updated information, including official documents and personal details.</li>
+                    <li>You are responsible for any errors or mistakes in the information provided.</li>
+                    <li>If you have an account, you will secure it with login details and take full responsibility for its use.</li>
+                    <li>Flight reserves the right to deny access to the Website for any reason, including violations of its Terms of Use.</li>
+                </ul>
+
+        </div>
+    </section>
+{% endblock%}
